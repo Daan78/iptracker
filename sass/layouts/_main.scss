@@ -1,0 +1,90 @@
+main {
+      height: 100%;
+}
+.results {
+      position: absolute;
+      display: block;
+      width: 100%;
+      top: 167px;
+      z-index: 1;
+      &__container {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+            background-color: white;
+            width: 100%;
+            border-radius: 15px;
+            padding: 27px 0 26px;
+            text-align: center;
+            &--clm {
+                  padding-bottom: 27px;
+                  h3 {
+                        font-size: 10px;
+                        line-height: 10px;
+                        font-weight: 700;
+                        letter-spacing: 1.6px;
+                        color: $color-gray;
+                        text-transform: uppercase;
+                        padding-bottom: 9px;
+                  }
+                  p {
+                        font-size: 21px;
+                        line-height: 21px;
+                        font-weight: 500;
+                        letter-spacing: -1.1px;
+                        color: $color-gray-dark
+                  }
+                  &:last-child {
+                        padding-bottom: 0;
+                  }
+            }
+      }
+      @include for-size( tablet-portrait-up ) {
+            
+      }
+      @include for-size( tablet-portrait-up  ) {
+            top: 200px;
+            &__container {
+                  grid-template-columns: 1fr 1fr;
+                  padding: 37px 0 35px 0;
+                  text-align: left;
+                  &--clm {
+                        position: relative;
+                        padding: 0 55px 0 32px;
+                        h3 {
+                              font-size: 12px;
+                              padding-bottom: 18px;
+                        }
+                        p {
+                              font-size: 26px;
+                              letter-spacing: -.2px;
+                              line-height: 30px;
+                        }
+                        &:last-child {
+                              padding-bottom: 0;
+                        }
+                        &::after {
+                              content: '';
+                              position: absolute;
+                              width: .2px;
+                              height: 85%;
+                              top: 7.5%;
+                              right: 0;
+                              background-color: $color-gray;
+                              opacity: .4;
+                        }
+                        &:last-child {
+                              &::after {
+                                    content: none;
+                              }
+                        }
+                        
+                  }
+            }
+      }
+      @include for-size( to-desktop ) {
+            &__container {
+                  grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+      }
+}

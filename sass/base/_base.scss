@@ -1,0 +1,16 @@
+html, body {
+      width: 100%;
+      height: 100vh;
+      font-family: $font;
+      font-size: $font-size-base;
+      line-height: $line-height;
+}
+.wrapper {
+      position: relative;
+      padding: 0 24px;
+      margin: 0 auto;
+      max-width: 1154px;
+      @include for-size( tablet-landscape-up ) {
+            padding: 0 22px;
+      }
+}

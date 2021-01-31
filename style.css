@@ -1,0 +1,526 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.wrapper {
+  position: relative;
+  padding: 0 24px;
+  margin: 0 auto;
+  max-width: 1154px;
+}
+
+@media (min-width: 750px) {
+  .wrapper {
+    padding: 0 22px;
+  }
+}
+
+.search {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-image: url(images/pattern-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search h1 {
+  color: white;
+  text-align: center;
+  padding: 25px 0 28px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 25.5px;
+}
+
+.search .searchform {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  max-width: 554px;
+  margin: 0 auto;
+}
+
+.search .searchform--input {
+  width: 100%;
+  border: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  text-indent: 25px;
+}
+
+.search .searchform--input:focus {
+  outline: none;
+}
+
+.search .searchform--input::-webkit-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--input:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--input::-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--input::placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--input:hover {
+  cursor: pointer;
+}
+
+.search .searchform--btn {
+  width: 68px;
+  height: 58px;
+  border: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: black;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.search .searchform--btn:hover {
+  background-color: #2b2b2b;
+}
+
+.search .searchform--btn:focus {
+  outline: none;
+}
+
+.search .searchform--btn::-webkit-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--btn:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--btn::-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.search .searchform--btn::placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+@media (min-width: 750px) {
+  .search {
+    height: 280px;
+  }
+  .search h1 {
+    padding: 33px 0 29px;
+    font-size: 31.4px;
+  }
+}
+
+.failure {
+  display: none;
+}
+
+.failure.show {
+  color: white;
+  text-align: center;
+  display: block;
+  top: 10px;
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  bottom: 0;
+  top: 300px;
+  width: 100%;
+  z-index: 0;
+}
+
+@media (min-width: 750px) {
+  .map {
+    top: 280px;
+  }
+}
+
+.marker {
+  background-image: url("images/icon-location.svg");
+  background-size: cover;
+  width: 50px;
+  height: 61px;
+}
+
+main {
+  height: 100%;
+}
+
+.results {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 167px;
+  z-index: 1;
+}
+
+.results__container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  background-color: white;
+  width: 100%;
+  border-radius: 15px;
+  padding: 27px 0 26px;
+  text-align: center;
+}
+
+.results__container--clm {
+  padding-bottom: 27px;
+}
+
+.results__container--clm h3 {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  color: #969696;
+  text-transform: uppercase;
+  padding-bottom: 9px;
+}
+
+.results__container--clm p {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 500;
+  letter-spacing: -1.1px;
+  color: #2b2b2b;
+}
+
+.results__container--clm:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .results {
+    top: 200px;
+  }
+  .results__container {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 37px 0 35px 0;
+    text-align: left;
+  }
+  .results__container--clm {
+    position: relative;
+    padding: 0 55px 0 32px;
+  }
+  .results__container--clm h3 {
+    font-size: 12px;
+    padding-bottom: 18px;
+  }
+  .results__container--clm p {
+    font-size: 26px;
+    letter-spacing: -.2px;
+    line-height: 30px;
+  }
+  .results__container--clm:last-child {
+    padding-bottom: 0;
+  }
+  .results__container--clm::after {
+    content: '';
+    position: absolute;
+    width: .2px;
+    height: 85%;
+    top: 7.5%;
+    right: 0;
+    background-color: #969696;
+    opacity: .4;
+  }
+  .results__container--clm:last-child::after {
+    content: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .results__container {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.original-design--desktop {
+  position: absolute;
+  width: 1440px;
+  height: 800px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-image: url(/design/desktop-design.jpg);
+  background-repeat: no-repeat;
+  background-size: 1440px 800px;
+  z-index: -1;
+  opacity: .8;
+}
+
+.original-design--mobile {
+  position: absolute;
+  width: 375px;
+  height: 828px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-image: url(/design/mobile-design.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: .8;
+}
+
+/*# sourceMappingURL=style.css.map */
